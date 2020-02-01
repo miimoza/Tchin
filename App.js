@@ -24,7 +24,6 @@ export default function App() {
           <View style={styles.party}>
           </View>
           <View style={styles.party}>
-          //prout
           </View>
           <View style={styles.party}>
           </View>
