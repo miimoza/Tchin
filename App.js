@@ -7,7 +7,7 @@ export default function App() {
   Font.loadAsync({
     'pacifico': require('./assets/fonts/Pacifico.ttf'),
   });
-  
+
   return (
     <View style={styles.main}>
       <View style={styles.topBar}>
@@ -24,6 +24,7 @@ export default function App() {
           <View style={styles.party}>
           </View>
           <View style={styles.party}>
+          //prout
           </View>
           <View style={styles.party}>
           </View>
