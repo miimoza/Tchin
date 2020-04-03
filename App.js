@@ -4,15 +4,14 @@ import * as Font from 'expo-font';
 
 export default function App() {
 
-  // let font = Font.loadAsync({
-  //   'pacifico': require('./assets/fonts/Pacifico.ttf'),
-  // });
-  // fontFamily:"pacifico"
-
+  Font.loadAsync({
+    'pacifico': require('./assets/fonts/Pacifico.ttf'),
+  });
+  
   return (
     <View style={styles.main}>
       <View style={styles.topBar}>
-        <Text style={{fontSize:50, color:'#FFA500',}}>
+        <Text style={{fontFamily:"pacifico", fontSize:50, color:'#FFA500',}}>
           Tchin
         </Text>
       </View>
