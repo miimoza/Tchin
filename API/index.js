@@ -1,17 +1,17 @@
 var express = require('express');
 var app = express();
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost/partyDB';
+var url = 'mongodb://localhost/party';
 var buffer = "";
 
-app.route('/Employeeid').get(function(req, res) {
+app.route('/party').get(function(req, res) {
    MongoClient.connect(url, function(err, db) {
-       var collection = db.collection('party');
-       var cursor = collection.find({});
+       var collection = db.db('party');
+       var cursor = db.find({});
        buffer = "";
        cursor.forEach(function(item) {
            if (item != null) {
-                   buffer = buffer + "    Party Id  " + item.id + "</br>";
+                   buffer = buffer + "    Party Names  " + item.name + "</br>";
            }
        }, function(err) {
            res.send(err);
